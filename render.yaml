@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: pde-api-proxy
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: ODDS_API_KEY
+        sync: false
+      - key: FOOTBALL_API_KEY
+        sync: false
